@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Friends from "./components/Friends";
+import Movies from "./components/Movies";
 function App(){
   const [count, setCount] = useState(0);
   return(
@@ -8,6 +9,7 @@ function App(){
     <button onClick={() => setCount(count + 1)}>Increment</button>
     <button onClick={() => setCount(count - 1)}>Decrement</button> 
     <Friends />
+    <Movies />
     </>
   )
 }

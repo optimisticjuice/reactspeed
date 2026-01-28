@@ -5,7 +5,8 @@ const Friends = () => {
         setFriends([...friends, "Huxn"])
     }
     const removeFriend = () => {
-        setFriends(friends.filter((friend,index) => index !== 0))
+        setFriends(friends.filter((friend,index) => index !== friends.length - 1)); // friends.length works here because we are removing the last friend in the array
+                                                                                    // while friend.length does not work because friend is an individual name and doesn't have a length property
     }
     return (
      <section>
