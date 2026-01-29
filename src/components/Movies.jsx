@@ -1,20 +1,30 @@
+import {useState} from "react";
 const Movies = () => {
+    const [isAdded, setIsAdded] = useState(false);
     const [movies, setMovies] = useState([
-        {title: "Passengers", ratings: "10"},
-        {title: "The Martian", ratings: "9"},
-        {title: "Interstellar", ratings: "8"},
+        {id:1, title: "Passengers", ratings: "10"},
+        {id:2, title: "The Martian", ratings: "9"},
+        {id:3, title: "Interstellar", ratings: "8"},
     ])
     const handleClick = () => {
-        setMovies(...movies, {title: "Spiderman Far From Home", ratings: 9.5});
-        
+        setMovies([...movies, {id:4,title: "Spiderman Far From Home", ratings: 9.5}]);
+        setIsAdded(true);
    
     }
   return (
     <section>
         <h2>Movies : </h2>
-        <h3>Title : {movies.title}</h3>
-        <b>Ratings : {movies.ratings}</b>
-        <button onClick={handleClick}>Add Movie</button>
+        {
+            movies.map((movie,index) => (
+                <div key={index + 1}>
+                <h3>{index + 1} Title : {movie.title}</h3>
+                <b>{index + 1} Ratings : {movie.ratings}</b>
+                </div>
+
+            ))
+
+        }
+        <button onClick={handleClick} disabled={isAdded}>Add  a Cool Movie</button>
     </section>
   )
 }

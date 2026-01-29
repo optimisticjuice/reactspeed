@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 const Friends = () => {
     const [friends, setFriends] = useState(["Alex", "John", "Jane", "Zack", "Zoey", "Cameron", "Musa", "Arthur", "Zara"]);
@@ -11,10 +12,10 @@ const Friends = () => {
     return (
      <section>
         {friends.map((friend,index) => (
-            <>
-            <i key={index}>{friend}</i> 
+            <React.Fragment key={index}>
+            <i>{friend}</i> 
             <hr />
-            </>
+            </React.Fragment>
         ))}
         <button onClick={manipulateFriends}>Manipulate Friends</button>
         <button onClick={removeFriend}>Remove Friend</button>
