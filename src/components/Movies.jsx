@@ -11,6 +11,16 @@ const Movies = () => {
         setIsAdded(true);
    
     }
+    const changeMovie = () => {
+        setMovies(movies.map((movie) => (
+
+            movie.id === 1 ?{...movies,
+                title: "Avatar"}
+                :
+                movie
+            )
+        ))
+    }
   return (
     <section>
         <h2>Movies : </h2>
@@ -24,7 +34,8 @@ const Movies = () => {
             ))
 
         }
-        <button onClick={handleClick} disabled={isAdded}>Add  a Cool Movie</button>
+        <button onClick={handleClick} disabled={isAdded}>Add Movie</button>
+        <button onClick={changeMovie}> Change First Movie </button>
     </section>
   )
 }

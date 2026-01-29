@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Friends from "./components/Friends";
 import Movies from "./components/Movies";
+import Section from "./components/Section";
+import Section2 from "./components/Section2";
+import Example from "./components/Example";
+import Example2 from "./components/Example2";
 function App(){
   const [count, setCount] = useState(0);
   return(
@@ -10,6 +14,10 @@ function App(){
     <button onClick={() => setCount(count - 1)}>Decrement</button> 
     <Friends />
     <Movies />
+    <Section  count={count} onClickHandler={() => setCount(count + 1)} />
+    <Section2 count={count} onClickHandler={() => setCount(count + 1)} />
+    <Example />
+    <Example2 />
     </>
   )
 }
