@@ -9,10 +9,12 @@ import Example3 from "./components/Example3";
 import Challenge from "./components/Challenge";
 import ShoppingList from "./components/ShoppingList";
 import CopyInput from "./components/CopyInput";
+import Switcher from "./components/Switcher";
 function App(){
   const [count, setCount] = useState(0);
   return(
     <>
+    <Switcher />
     <h1>Count : {count}</h1>
     <button onClick={() => setCount(count + 1)}>Increment</button>
     <button onClick={() => setCount(count - 1)}>Decrement</button> 
