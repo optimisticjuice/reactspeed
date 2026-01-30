@@ -9,7 +9,7 @@ const BasicEffect = () => {
             setCopy(true);
             setTimeout(() => {
                 setCopy(false);
-            }, 2000);
+            }, 10000);
         });
         
     }   
@@ -19,11 +19,11 @@ const BasicEffect = () => {
   return (
     <>
     <button onClick={() => setCount(count + 1)}>Increment</button>
-    <h1 onCopy={handleCopy}>Count : {count}</h1>
+    <h1 style={{cursor: "pointer"}} onClick={handleCopy}>Count : {count}</h1>
     <button onClick={() => setCount(count - 1)}> Decrement </button>
-     {copy && <p style={{color: "green", position: "fixed", bottom: "2rem", right: "2rem", zIndex: 2}}>Copied To Clipboard</p>}
+     {copy && <div style={{color: "green", position: "fixed", bottom: "2rem", right: "2rem", zIndex: 2}}>Copied To Clipboard</div>}
     </>
-  )
+  ) 
 }
 
 export default BasicEffect

@@ -11,10 +11,13 @@ import ShoppingList from "./components/ShoppingList";
 import CopyInput from "./components/CopyInput";
 import Switcher from "./components/Switcher";
 import Date from "./components/Date";
+import BasicEffect from "./components/BasicEffect";
+import FetchDataEffects from "./components/FetchDataEffects";
 function App(){
   const [count, setCount] = useState(0);
   return(
     <>
+    <BasicEffect />
     <Switcher />
     <Date />
     <h1>Count : {count}</h1>
@@ -30,6 +33,7 @@ function App(){
     <CopyInput />
     <Challenge />
     <ShoppingList />
+    <FetchDataEffects />
     </>
   )
 }
