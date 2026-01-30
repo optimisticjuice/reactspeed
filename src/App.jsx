@@ -8,6 +8,7 @@ import Example2 from "./components/Example2";
 import Example3 from "./components/Example3";
 import Challenge from "./components/Challenge";
 import ShoppingList from "./components/ShoppingList";
+import CopyInput from "./components/CopyInput";
 function App(){
   const [count, setCount] = useState(0);
   return(
@@ -22,6 +23,7 @@ function App(){
     <Example />
     <Example2 />
     <Example3 />
+    <CopyInput />
     <Challenge />
     <ShoppingList />
     </>
