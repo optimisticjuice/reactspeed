@@ -5,6 +5,8 @@ import Section from "./components/Section";
 import Section2 from "./components/Section2";
 import Example from "./components/Example";
 import Example2 from "./components/Example2";
+import Example3 from "./components/Example3";
+import Challenge from "./components/Challenge";
 function App(){
   const [count, setCount] = useState(0);
   return(
@@ -18,6 +20,8 @@ function App(){
     <Section2 count={count} onClickHandler={() => setCount(count + 1)} />
     <Example />
     <Example2 />
+    <Example3 />
+    <Challenge />
     </>
   )
 }
