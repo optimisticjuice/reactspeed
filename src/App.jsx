@@ -7,6 +7,7 @@ import Example from "./components/Example";
 import Example2 from "./components/Example2";
 import Example3 from "./components/Example3";
 import Challenge from "./components/Challenge";
+import ShoppingList from "./components/ShoppingList";
 function App(){
   const [count, setCount] = useState(0);
   return(
@@ -22,6 +23,7 @@ function App(){
     <Example2 />
     <Example3 />
     <Challenge />
+    <ShoppingList />
     </>
   )
 }
