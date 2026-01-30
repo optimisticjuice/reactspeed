@@ -1,6 +1,6 @@
 
 import { useState } from "react"; // Import useState hook from React for state management
-
+import PopupComponent from "./PopupComponent.jsx";
 const CopyInput = () => {
     const [inputValue, setInputValue] = useState(" "); // State for storing the input text value, initialized with a space
     const [copyValue, setCopyValue] = useState(false); // State for tracking copy status, initialized to false (not copied)
@@ -22,6 +22,7 @@ const CopyInput = () => {
     />
     <button onClick={handleCopy}>Copy</button> {/* Button that triggers handleCopy function when clicked */}
     {copyValue && <p>Text copied to clipboard</p>} {/* Conditional rendering: show message only when copyValue is true */}
+     <PopupComponent copied={copyValue}/>
     </>
   )
 }
