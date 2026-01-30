@@ -10,11 +10,13 @@ import Challenge from "./components/Challenge";
 import ShoppingList from "./components/ShoppingList";
 import CopyInput from "./components/CopyInput";
 import Switcher from "./components/Switcher";
+import Date from "./components/Date";
 function App(){
   const [count, setCount] = useState(0);
   return(
     <>
     <Switcher />
+    <Date />
     <h1>Count : {count}</h1>
     <button onClick={() => setCount(count + 1)}>Increment</button>
     <button onClick={() => setCount(count - 1)}>Decrement</button> 
