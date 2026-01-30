@@ -10,7 +10,7 @@ const CopyInput = () => {
             setCopyValue(true); // Set copy status to true when copy succeeds
             setTimeout(() => { // Set a timer to reset the copy status after 2 seconds
                 setCopyValue(false); // Reset copy status back to false to hide the success message
-            }, 2000); // 2000 milliseconds = 2 seconds delay
+            }, 7500); // 7500 milliseconds = 7.5 seconds delay
         }) 
     }
   return ( // Return JSX for rendering the component UI
